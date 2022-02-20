@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Phông chữ */
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+clear: both;
+}
+.text-white{
+    color: white !important;
+}
+/* Nổi lên phần content và đứng nguyên */
+#header {
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav{
+    display: inline-block;
+}
+#nav>li{
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+/* the con cap 1 truc tiep */
+#nav > li > a{
+    color: white;
+    text-transform: uppercase;
+} 
+/* Phần nav là một khối chiếm nửa phần header */
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px; 
+    display: block; 
+}
+#nav li:hover .subnav{
+    display: block;
+}
+/* Khi di chuột hiện màu nền  */
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    color: black;
+    background-color: #ccc;
+}
+/* Chỉnh sửa phần nội dung cấp 2 */
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute; 
+    background-color: white;
+    top: 100%;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+/* Chỉnh sửa phần nội dung cấp 2 */
+#nav .subnav a{
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+}
+/* Chỉnh sửa kích thước nút  */
+#nav .muitenxuong{
+    font-size: 13px;
+    color: white;
+}
+/* Nút chứa hình tìm kiếm */
+#header .search-btn{
+    float: right;
+    padding: 0 21px;
+}
+/* Chỉnh sửa nút search */
+#header .search-icon{
+    color: white;
+    font-size: 16px;
+    line-height: 46px;
+}
+/* Nút nào nhấn đc thay đổi cách hiện con trỏ */
+#header .search-btn:hover{
+    cursor: pointer;
+    background-color: #f44336;
+}
+/* Phần hình ảnh chuyển động */
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%; 
+    /*padding top so sanh voi chieu ngang cua chinh no */
+    background: url('/W3-BAND/assets/img/slider/la.jpg') top center / cover no-repeat ;
+}
+/* Chỉnh sửa phần nội dung content  */
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+/* Chữ tiêu đề */
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+/* Chữ miêu tả tiêu đề */
+#slider .text-description {
+    font-size: 16px;
+    margin-top: 25px; 
+}
+/* Thẻ ôm phần content about */
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Chữ tiêu đề cho nhiều phần */
+#content .section-heading{
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+/* Chữ nghiêng cho nhiều phần*/
+#content .section-sub-heading{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+/* Phần diễn giải phần about */
+.about-text{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+/* Cách ra so với phần tiêu đề About  */
+#content .members-list{
+    margin-top: 48px;
+}
+/* Chỉnh sửa hiển thị cho phần ảnh about  */
+#content .member-item{
+    float: left;
+    text-align: center;
+    width: 33.33333%;
+    
+}
+/* Ảnh phần about  */
+#content .member-name{
+    font-size: 15px;
+}
+#content .member-img{
+    margin-top: 15px;
+    border-radius: 4px;
+    width: 154px;
+}
+/* Tour section  */
+
+.tour-section{
+    background-color: black;
+}
+.tour-section .ticket-lists{
+    background-color: white;
+    margin-top: 40px;  
+}
+/* Tickets  */
+.ticket-lists li{
+    list-style-type: none;
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.ticket-lists .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.ticket-lists .quality{
+    float: right;
+    background-color: black;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    line-height: 24px;
+    text-align: center;
+    margin-top: -3px;
+}
+/* Places  */
+.place-lists {
+    margin: 32px -8px 0;
+    padding-bottom: 48px;
+}
+
+.place-item {
+   float: left;
+   width: 33.33333%;
+   padding: 0 8px;/*tren duoi trai phai*/
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    /* Khi chon vao se lam mo  */
+    opacity: 0.6;
+}
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    background-color: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    color: #fff;
+    margin-top: 15px;
+    display: inline-block;
+}
+.place-buy-btn:hover{
+    background-color: #ccc;
+    color: black;
+}
+#footer {
+
+}
